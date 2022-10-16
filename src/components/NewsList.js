@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const NewsList = ({ news }) => {
     return (  
         <div className="row">
-            {news.map(n => (
+            {news && news.map(n => (
                 <News 
                     key={n.url}
                     n={n}
