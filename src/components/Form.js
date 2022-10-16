@@ -20,8 +20,7 @@ const Form = ({ saveTopic }) => {
     // When user submits pass topic to app.js
     const findNews = e => {
         e.preventDefault();
-
-        saveTopic(topic)
+        saveTopic(topic);
     }
 
     return (  
