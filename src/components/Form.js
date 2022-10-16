@@ -2,8 +2,19 @@ import useSelect from '../hooks/useSelect';
 import styles from './Form.module.css'
 
 const Form = ({}) => {
+
+    const OPTIONS = [
+        {value: 'general', label: 'General'},
+        {value: 'business', label: 'Business'},
+        {value: 'entertainment', label: 'Entertainment'},
+        {value: 'health', label: 'Health'},
+        {value: 'science', label: 'Science'},
+        {value: 'sports', label: 'Sports'},
+        {value: 'technology', label: 'Technology'}
+    ]
+
     // Use custom hook
-    const [ topic, SelectNews ] = useSelect();
+    const [ topic, SelectNews ] = useSelect('science',  OPTIONS);
 
     return (  
         <div className={`${styles.searcher} row`}>
