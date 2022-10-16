@@ -1,10 +1,13 @@
-import New from "./New";
+import News from "./News";
 
 const NewsList = ({ news }) => {
     return (  
         <div className="row">
             {news.map(n => (
-                <New />
+                <News 
+                    key={n.url}
+                    n={n}
+                />
             ))}
         </div>
     );
