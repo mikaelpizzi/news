@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const News = ({ n }) => {
     // Extract data
     const { urlToImage, url, description, title, source} = n;
@@ -32,5 +34,9 @@ const News = ({ n }) => {
         </div>
     );
 }
- 
+
+News.propTypes = {
+    n: PropTypes.object.isRequired
+}
+
 export default News;
